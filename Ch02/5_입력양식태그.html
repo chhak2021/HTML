@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5_입력양식태그</title>
+    <!--
+        날짜 : 2022/09/14
+        이름 : 김철학
+        내용 : 입력양식태그 실습하기
+
+        Form 데이터 전송(method)
+         - Get 방식 : 입력한 데이터를 URL주소에 Parameter로 전송, 데이터가 노출되어 보안취약
+         - Post 방식 : 입력한 데이터를 Request Header에 심어서 전송, 데이터가 은닉되어 보안유리
+    -->
+</head>
+<body>
+    <h3>기본입력</h3>
+    <form action="http://naver.com" method="get">
+        <table border="1">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="uid"/></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="pass"/></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="submit" value="전송하기"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h3>기타 입력양식태그</h3>
+    <form action="./1_텍스트태그.html" method="get">
+        <h4>취미를 고르세요.</h4>
+        <label><input type="checkbox" name="hobby" value="1"/>등산</label>
+        <label><input type="checkbox" name="hobby" value="2"/>여행</label>
+        <label><input type="checkbox" name="hobby" value="3"/>영화</label>
+        <label><input type="checkbox" name="hobby" value="4"/>게임</label>
+        <label><input type="checkbox" name="hobby" value="5"/>운동</label>
+
+        <h4>성별을 선택하세요.</h4>
+        <label><input type="radio" name="gender" value="1"/>남</label>
+        <label><input type="radio" name="gender" value="2"/>여</label>
+
+        <h4>주소를 선택하세요.</h4>
+        <select name="addr">
+            <option>서울</option>
+            <option>대전</option>
+            <option>대구</option>
+            <option>부산</option>
+            <option>광주</option>
+        </select>
+
+        <h4>날짜를 선택하세요.</h4>
+        <input type="date" name="date"/>
+
+        <br/>
+        <br/>
+        <input type="submit" value="전송하기"/>
+    </form>
+
+    <h3>자기소개</h3>
+    <form action="http://naver.com" method="post">
+        <textarea name="introduce" cols="30" rows="10"></textarea>
+        <input type="submit" value="전송하기"/>
+    </form>    
+
+</body>
+</html>
