@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_가시속성</title>
+    <!--
+        날짜 : 2022/09/19
+        이름 : 김철학
+        내용 : CSS 가시속성 실습하기
+
+        가시속성(display)
+         display: none
+          - 태그요소를 브라우저 화면에서 제거(공간 포함)
+          - visibility: hidden은 자리공간 남음
+         
+         display: block
+          - 태그요소를 block 형식으로 변환
+          - 세로방향 출력, width/height 적용
+
+         display: inline
+          - 태그요소를 inline 형식으로 변환
+          - 가로방향 출력, width/height 적용 안됨
+
+         display: inline-block
+          - 태그요소를 inline-block 형식으로 변환
+          - 가로방향 출력, width/height 적용
+    -->
+    <style>
+        div > span {background: orange;}
+        div > div {background: green;}
+
+        .box1 > span:nth-child(1) {display: none;}
+        .box1 > span:nth-child(2) {visibility: hidden;}
+        .box2 > span:nth-child(2) {
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+        .box3 > div {
+            display: inline;
+            width: 100px;
+            height: 100px;
+        }
+        .box4 > div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>가시속성</h3>
+
+    <h4>display:none</h4>
+    <div class="box1">
+        <span>TEXT1</span>
+        <span>TEXT2</span>
+        <span>TEXT3</span>
+    </div>
+    
+    <h4>display:block</h4>
+    <div class="box2">
+        <span>TEXT1</span>
+        <span>TEXT2</span>
+        <span>TEXT3</span>
+    </div>
+    
+    <h4>display:inline</h4>
+    <div class="box3">
+        <span>TEXT1</span>
+        <div>TEXT2</div>
+        <span>TEXT3</span>
+    </div>
+
+    <h4>display:inline-block</h4>
+    <div class="box4">
+        <span>TEXT1</span>
+        <div>TEXT2</div>
+        <span>TEXT3</span>
+    </div>    
+</body>
+</html>
