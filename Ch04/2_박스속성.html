@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <title>2_박스속성</title>
     <!--
-        날짜 : 2022/09/19
+        날짜 : 2022/09/20
         이름 : 김철학
         내용 : 박스속성 실습하기
 
-        박스속성
         width, height
          - block, inline-block 태그의 가로, 세로 크기 지정
          - px, % 단위 사용
 
         padding, margin
-         - padding : 안쪽 여백 지정
-         - margin : 바깥쪽 여백 지정
-        
+         - padding : 안쪽 여백
+         - margin : 바깥쪽 여백
+
+        border
+         - 태그의 테두리 지정
+         - border: '크기 모양 색' 순서로 지정
+
         box-sizing
-         - 고정된 width, height에서 padding, border 적용
+         - 고정된 width, height 크기에서 padding, border 적용
+         - padding, border 속성과 같이 사용
     -->
     <style>
         div {
@@ -57,19 +61,19 @@
         }
         section:nth-of-type(2) > div:nth-child(5) {
             padding-top: 10px;
-            padding-left: 20px;
+            padding-right: 20px;
             padding-bottom: 30px;
-            padding-right: 40px;
+            padding-left: 40px;
             margin-top: 10px;
-            margin-left: 20px;
+            margin-right: 20px;
             margin-bottom: 30px;
-            margin-right: 40px;
+            margin-left: 40px;            
         }
         section:nth-of-type(2) > div:nth-child(6) {
             display: block;
             margin: 0 auto;
         }
-        
+
         section:nth-of-type(3) > div:nth-child(1) {
             border-width: 1px;
             border-style: solid;
@@ -83,7 +87,7 @@
         }
 
         section:nth-of-type(4) > div:nth-child(1) {
-            padding: 10px;
+            padding: 12px;
             box-sizing: border-box;
         }
         section:nth-of-type(4) > div:nth-child(2) {
@@ -95,9 +99,7 @@
             border: 1px solid black;
             box-sizing: border-box;
         }
-
     </style>
-
 </head>
 <body>
     <h3>박스속성</h3>
@@ -125,13 +127,12 @@
         <div>2</div>
         <div>3</div>
     </section>
-    
+
     <h4>box-sizing 속성</h4>
     <section>
         <div>1</div>
         <div>2</div>
         <div>3</div>
-    </section>
-    
+    </section>    
 </body>
 </html>
