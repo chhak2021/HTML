@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3_Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            width: 800px;
+            height: auto;
+            background: #aaa;
+            margin: 0 auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+            background-color: #ccc;
+        }
+        
+        main {
+            width: 100%;
+            height: auto;
+            background-color: #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        main > aside {
+            float: left;
+            width: 220px;
+            height: 400px;
+            background-color: #eee;
+        }
+        main > section {
+            float: right;
+            width: 530px;
+            height: 400px;
+            background-color: #eee;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>header</header>
+        <main>
+            <p>main</p>
+            <aside>aside</aside>
+            <section>section</section>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
