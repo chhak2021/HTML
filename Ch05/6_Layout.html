@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }       
+        
+        #wrapper {            
+            width: 860px;
+            height: auto;            
+            background: #aaa;
+            margin: 10px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header {            
+            width: 100%;
+            height: 120px;            
+            background: #ccc;
+            margin-bottom: 10px;                        
+        }
+        
+        main {            
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: #ccc;
+            padding: 10px;
+            box-sizing: border-box;            
+            overflow: hidden;
+        }
+
+        main > aside {
+            float: left;            
+            width: 200px;
+            height: 400px;
+            margin-right: 10px;
+            background: #eee;
+        }
+
+        main > section {
+            float: left;
+            width: 400px;
+            height: 400px;            
+            background: #eee;            
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #ccc;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>Header</h3>            
+        </header>
+        <main>
+            <h3>Main</h3>
+            <aside>
+                <h3>Aside #1</h3>
+            </aside>
+            <aside>
+                <h3>Aside #2</h3>
+            </aside>
+            <section>
+                <h3>Section</h3>
+            </section>
+        </main>
+        <footer>
+            <h3>Footer</h3>
+        </footer>
+    </div>
+    
+</body>
+</html>
