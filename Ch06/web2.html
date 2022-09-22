@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+        ul, ol {list-style: none;}
+
+        #wrapper {
+            width: 800px;
+            height: auto;            
+            margin: 10px auto;            
+        }
+
+        header {            
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #e4f0ce;
+            border-bottom: 2px solid #adbd8c;
+        }
+
+        header > h3 {                        
+            font-size: 18px;
+            font-weight: bold;
+            color: #111;            
+        }
+
+        main {
+            padding: 10px 0;
+            box-sizing: border-box;
+        }
+
+        main > table {
+            border-spacing: 0;
+        }
+
+        main > table tr > td {
+            position: relative;
+            padding: 10px;
+            vertical-align: top;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ccc;
+        }
+
+        main > table tr > td:nth-child(1) {width: auto;}
+        main > table tr > td:nth-child(2) {width: 60%;}
+        main > table tr > td:nth-child(3) {width: 20%;}
+        main > table tr > td:nth-child(4) {width: 20%;}
+
+        main > table tr > td ul > li {
+            line-height: 20px;
+        }
+
+        main > table .tit {
+            font-weight: bold;
+        }
+        main > table .desc {
+            color: #555;
+        }
+        main > table .price {
+            color: #e25147;
+            font-weight: bold;
+        }
+        main > table .delivery {}
+        main > table .seller {}
+        main > table .rating {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+            width: 80px;                        
+            height: 16px;            
+            font-size: 0;
+            background-image: url('./img/stars.png');
+            background-size: 80px;
+            background-repeat: no-repeat;
+        }
+
+        main > table .star1 {width: 16px;}
+        main > table .star2 {width: 32px;}
+        main > table .star3 {width: 48px;}
+        main > table .star4 {width: 64px;}
+        main > table .star5 {width: 80px;}        
+
+        footer {
+            padding: 6px;
+            box-sizing: border-box;
+            text-align: right;
+            background: #efefef;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>상품목록</h3>
+        </header>
+        <main>
+            <table border="0">
+                <tr>
+                    <td><img src="./img/13.jpg" alt=""></td>
+                    <td>
+                        <ul>
+                            <li class="tit">딸기 500g</li>
+                            <li class="desc">3만원 이상 구매시 무료배송해드립니다.</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="price">4,000원</li>
+                            <li class="delivery">배송비 2,500원</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="seller">팜스토리</li>
+                            <li class="rating star1">판매등급</li>
+                        </ul>                        
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><img src="./img/14.jpg" alt=""></td>
+                    <td>
+                        <ul>
+                            <li class="tit">딸기 500g</li>
+                            <li class="desc">3만원 이상 구매시 무료배송해드립니다.</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="price">4,000원</li>
+                            <li class="delivery">배송비 2,500원</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="seller">팜스토리</li>
+                            <li class="rating star2">판매등급</li>
+                        </ul>                        
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><img src="./img/15.jpg" alt=""></td>
+                    <td>
+                        <ul>
+                            <li class="tit">딸기 500g</li>
+                            <li class="desc">3만원 이상 구매시 무료배송해드립니다.</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="price">4,000원</li>
+                            <li class="delivery">배송비 2,500원</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="seller">팜스토리</li>
+                            <li class="rating star3">판매등급</li>
+                        </ul>                        
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><img src="./img/16.jpg" alt=""></td>
+                    <td>
+                        <ul>
+                            <li class="tit">딸기 500g</li>
+                            <li class="desc">3만원 이상 구매시 무료배송해드립니다.</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="price">4,000원</li>
+                            <li class="delivery">배송비 2,500원</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="seller">팜스토리</li>
+                            <li class="rating star4">판매등급</li>
+                        </ul>                        
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><img src="./img/17.jpg" alt=""></td>
+                    <td>
+                        <ul>
+                            <li class="tit">딸기 500g</li>
+                            <li class="desc">3만원 이상 구매시 무료배송해드립니다.</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="price">4,000원</li>
+                            <li class="delivery">배송비 2,500원</li>
+                        </ul>                        
+                    </td>
+                    <td>
+                        <ul>
+                            <li class="seller">팜스토리</li>
+                            <li class="rating star5">판매등급</li>
+                        </ul>                        
+                    </td>                    
+                </tr>
+            </table>
+        </main>
+        <footer>Web #2</footer>
+    </div>
+
+    
+</body>
+</html>

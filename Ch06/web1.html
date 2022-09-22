@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+
+        #wrapper {
+            width: 800px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 95px;
+            background: #2d3a4b;
+        }
+
+        header .logo {
+            margin-top: 26px;
+            margin-left: 20px;
+        }
+
+        header a {
+            color: #fff;
+        }
+
+        header a:hover {
+            color: #777;
+        }
+
+        header > p {
+            float: right;
+            margin: 10px;
+        }        
+
+        header > ul {
+            position: absolute;
+            right: 56px;
+            bottom: 26px;            
+        }
+
+        header > ul > li {
+            float: left;
+            margin-right: 26px;
+        }
+        header > ul > li > a {
+            font-size: 16px;
+        }
+
+        main {
+            width: 100%;
+            height: auto;
+        }
+        main > section {
+            width: 100%;
+            height: auto;
+        }
+        main > .banner {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        main > .banner > article {
+            float: left;
+            width: 50%;
+            height: 100px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            text-align: center;
+                        
+        }
+
+        
+        footer {
+            width: 100%;
+            height: 90px;
+            background-color: #f1f1f1;
+            margin-top: 16px;
+        }
+
+        footer > img {
+            margin-top: 24px;
+            margin-left: 10px;
+        }
+
+        footer > p {
+            float: right;
+            margin-top: 10px;
+            margin-right: 120px;
+            color: #585858;
+            line-height: 20px;
+        }
+
+        footer > p > span {
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href="#"><img src="./img/logo.png" alt="로고" class="logo"/></a>
+            <p>
+                <a href="#">HOME |</a>
+                <a href="#">LOGIN |</a>
+                <a href="#">JOIN |</a>
+                <a href="#">NOTICE</a>
+            </p>
+
+            <ul>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">CUSTOMER</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">RECRUIT</a></li>
+            </ul>
+        </header>
+        <main>
+            <section>
+                <img src="./img//main_img.png" alt="세상을 움직이는 포폴리오"/>
+            </section>
+            <div class="banner">
+                <article>
+                    <a href="#"><img src="./img/banner1.png" alt="서비스소개"></a>
+                </article>
+                <article>
+                    <a href="#"><img src="./img/banner2.png" alt="제품소개"></a>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <img src="./img/footer_logo.png" alt="로고"/>
+            <p>
+                (주)포폴리오 / 부산시 부산진구 서면로 121 / 대표 : 홍길동<br/>
+                사업자번호 : 123-4567-890 / 전화 : 1588-0000 / 이메일 : master@pofolio.com<br/>
+                <span>ⓒPofolio All rights reserved.</span>
+            </p>
+        </footer>
+    </div>    
+</body>
+</html>
