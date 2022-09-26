@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        /* 태그 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '돋움';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input {outline: none;}
+        
+        #wrapper {
+            width: 800px;
+            height: auto;            
+            margin: 0 auto;
+        }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 35px;
+            background: #f7f7f7;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        header > h3 {
+            float: left;
+            font-weight: bold;
+            color: #777;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        /* 메인 */
+        main {
+            width: 100%;
+            height: auto;            
+        }
+        /* 푸터 */
+        footer {
+            width: 100%;
+            height: 35px;
+            background: #f7f7f7;
+            border-top: 1px solid #ebebeb;
+        }
+
+        footer > p {
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+            color: #777;
+        }
+
+        /* 로그인 */
+        #user > .login {
+            position: relative;
+            width: 360px;
+            height: auto;
+            border: 1px solid #cfded8;
+            box-sizing: border-box;
+            margin: 100px auto;
+        }
+        #user > .login > form {}
+        #user > .login > form > table {
+            margin-left: 52px;
+            margin-top: 30px;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        #user > .login > form > table tr {}
+        #user > .login > form > table tr > td {}
+        #user > .login > form > table img {width: 20px;}
+        #user > .login > form > table input {
+            width: 162px;
+            height: 22px;
+            margin-left: 6px;
+            margin-bottom: 4px;
+            border: 1px solid #e4eaec;
+            background: #f7f7f7;
+        }
+        #user > .login > form > .btnLogin {
+            position: absolute;
+            right: 50px;
+            top: 30px;
+            width: 60px;
+            height: 52px;
+            background-color: #fdfdfd;
+            border: 1px solid #bebebe;
+        }
+
+        #user > .login > div {
+            width: 100%;
+            height: 104px;
+            background: #f5f6fa;
+            border-top: 1px solid #cfded8;
+            margin-top: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #user > .login > div > h3 {}
+        #user > .login > div > p {
+            margin: 10px 0;
+        }
+        #user > .login > div > a {
+            float: right;
+        }
+
+        /* 약관 */
+        /* 회원가입 */
+        /* 글목록 */
+        /* 글쓰기 */
+        /* 글보기 */
+        /* 글수정 */
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h3>Board System v1.0</h3>
+        </header>
+        <main id="user">
+            <section class="login">
+                <form action="#">
+                    <table border="0">
+                        <tr>
+                            <td><img src="../img/login_ico_id.png" alt="아이디"/></td>
+                            <td><input type="text" name="uid" placeholder="아이디 입력"/></td>
+                        </tr>
+                        <tr>
+                            <td><img src="../img/login_ico_pw.png" alt="비밀번호"/></td>
+                            <td><input type="password" name="pass" placeholder="비밀번호 입력"/></td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="로그인" class="btnLogin"/>
+                </form>
+                <div>
+                    <h3>회원 로그인 안내</h3>
+                    <p>
+                        아직 회원이 아니시면 회원으로 가입하세요.
+                    </p>
+                    <a href="#">회원가입</a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>ⓒCopyright chhak.or.kr</p>
+        </footer>
+    </div>    
+</body>
+</html>
