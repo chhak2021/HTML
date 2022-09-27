@@ -214,10 +214,10 @@ footer > p {
 
 /* 글목록 */
 #board > .list {
+    position: relative;
     width: 720px;
     height: auto;            
-    margin: 60px auto;
-    overflow: hidden;
+    margin: 60px auto;    
 }
 #board > .list > table {
     width: 100%;
@@ -249,8 +249,12 @@ footer > p {
 #board > .list > table tr > td:nth-child(4) {}
 #board > .list > table tr > td:nth-child(5) {}
 
-#board > .list > .page {}
+#board > .list > .page {
+    text-align: center;
+    margin-top: 10px;
+}
 #board > .list > .page > a {
+    display: inline-block;
     padding: 8px;
     border: 1px solid #d7d7d7;
     background: #f2f2f2;
@@ -278,4 +282,11 @@ footer > p {
 .btnCancel {}
 .btnNext { background: #e9e9e9; }
 .btnRegister {}
-.btnWrite {float:right; border: 1px solid #3b3c3f; background: #4b545e; color: #fff;}
+.btnWrite {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
