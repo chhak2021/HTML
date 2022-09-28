@@ -269,13 +269,102 @@ footer > p {
 }
 
 /* 글쓰기 */
+#board > .write {
+    width: 720px;
+    height: auto;            
+    margin: 60px auto;
+    overflow: hidden;
+}
+#board > .write table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #111;
+}
+#board > .write table caption{
+    text-align: left;
+    margin-bottom: 6px;
+}
+#board > .write table th {
+    width: 112px;
+    height: 50px;
+    background: #f5f8f9;
+    border-bottom: 1px solid #e9e9e9;
+}
+#board > .write table td {
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
+}
+#board > .write table td > input {
+    width: 400px;
+    height: 24px;
+    border: none;
+}
+#board > .write table td > textarea {
+    width: 100%;
+    height: 280px;
+    resize: none;
+    border: none;
+}
+
+#board > .write > form > div {
+    float: right;
+    margin-top: 10px;
+}
+
 /* 글보기 */
 /* 글수정 */
+#board > .modify {
+    width: 720px;
+    height: auto;            
+    margin: 60px auto;
+    overflow: hidden;
+}
+#board > .modify table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 2px solid #111;
+}
+#board > .modify table caption{
+    text-align: left;
+    margin-bottom: 6px;
+}
+#board > .modify table th {
+    width: 112px;
+    height: 50px;
+    background: #f5f8f9;
+    border-bottom: 1px solid #e9e9e9;
+}
+#board > .modify table td {
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
+}
+#board > .modify table td > input {
+    width: 400px;
+    height: 24px;
+    border: none;
+}
+#board > .modify table td > textarea {
+    width: 100%;
+    height: 280px;
+    resize: none;
+    border: none;
+}
+
+#board > .modify > form > div {
+    float: right;
+    margin-top: 10px;
+}
 
 /* 버튼 공통 */
 .btn {
     display: inline-block;
-    padding: 10px;    
+    padding: 8px;    
     border: 1px solid #bebebe; 
     text-align: center;    
 }
@@ -286,6 +375,12 @@ footer > p {
     position: absolute;
     right: 0;
     bottom: 0;
+    border: 1px solid #3b3c3f; 
+    background: #4b545e; 
+    color: #fff;
+}
+
+.btnComplete {
     border: 1px solid #3b3c3f; 
     background: #4b545e; 
     color: #fff;
