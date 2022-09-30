@@ -167,16 +167,15 @@
             width: 195px;
             height: 760px;
             margin-top: 5px;
-            border: 1px solid green;
+            border: 1px solid #d7d7d7;
             box-sizing: border-box;
         }
 
         main > section > aside > .notice {
             width: 100%;
             height: 204px;
-            border: 1px solid red;
-            box-sizing: border-box;
             padding: 10px;
+            box-sizing: border-box;
         }
         main > section > aside > .notice > h3 {
             font-weight: bold;
@@ -192,8 +191,57 @@
             white-space: nowrap;
             overflow: hidden;
         }
-
         main > section > aside > .notice > ul a::before {content: url('./img/ico_latest.gif');}
+
+        main > section > aside > .quick {
+            width: 100%;
+            height: 204px;            
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        main > section > aside > .quick > h3 {    font-size: 14px;font-weight: bold;}
+        main > section > aside > .quick > a {
+            display: block;
+            width: 100%;
+            height: 34px;
+            border: 1px solid #d9d9d9;
+            margin-top: 6px;
+            font-size: 0;
+            background: #f6f6f6;
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+        main > section > aside > .quick > a:nth-of-type(1) {background-image: url('./img/aside_quick_court.png');}
+        main > section > aside > .quick > a:nth-of-type(2) {background-image: url('./img/aside_quick_google.png');}
+        main > section > aside > .quick > a:nth-of-type(3) {background-image: url('./img/aside_quick_naver_map.png');}
+        main > section > aside > .quick > a:nth-of-type(4) {background-image: url('./img/aside_quick_naver_subway.png');}
+        
+        main > section > aside > a {
+            display: block;
+            width: 195px;
+            height: 83px;
+            margin-left: -1px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+            margin-top: 6px;
+        }
+        main > section > aside > a > img {}
+        main > section > aside > a > img:nth-child(1) {margin-left: 7px; margin-top: 10px;}
+        main > section > aside > a > img:nth-child(2) {float: right;}
+
+        main > section > aside > .banner {
+            width: 195px;
+            height: 167px;
+            border: 1px solid #999;
+            box-sizing: border-box;
+            margin-left: -1px;
+            margin-top: 6px;
+            background: url('./img/aside_banner_bg.jpg');
+        }
+        main > section > aside > .banner > img {}
+        main > section > aside > .banner > img:nth-child(1) {float: right;}
+        main > section > aside > .banner > img:nth-child(2) {margin-top: 10px;margin-left: 14px;}
+        main > section > aside > .banner > a {display: inline-block;margin-left: 16px;margin-top: 10px;}
 
 
         main > section > article {
@@ -201,20 +249,60 @@
             width: 800px;
             height: 250px;
             margin-top: 5px;
-            border: 1px solid green;
+            padding: 16px;
+            border: 1px solid #d7d7d7;
             box-sizing: border-box;
         }
+
+        main > section > article > h3 {font-weight: bold; font-size: 14px;}
+        main > section > article > h3 > a {float: right;}
+        main > section > article > ul {
+            width: 100%;
+            height: auto;                        
+            margin-top: 26px;
+            overflow: hidden;
+        }
+        main > section > article > ul > li {
+            float: left;
+            width: 20%;
+            height: 100%;
+        }
+
+        main > section > article > ul .thumb {
+            width: 150px;
+            height: 100px;
+        }
+        main > section > article > ul a {    
+            display: block;
+            width: 95%;
+            text-align: center;
+        }
+        main > section > article > ul a:hover {text-decoration: underline;}  
 
         /* 푸터 */
         footer {
             width: 1000px;
             height: 130px;
-            border: 1px solid blue;
+            border: 1px solid #d7d7d7;
+            border-top: 2px solid #777777;
+            padding: 10px;
             box-sizing: border-box;
             margin: 0 auto;
+            margin-bottom: 10px;
         }
 
+        footer > p {
+            font-size: 11.5px;
+            color: #585858;
+            line-height: 20px;
+            margin-left: 10px;
+        }
 
+        footer > p > span {
+            display: block;
+            margin-top: 6px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -309,13 +397,117 @@
                             <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
                         </ul>
                     </article>
+
+                    <article class="quick">
+                        <h3>바로가기</h3>
+                        <a href="#">대법원 인터넷 등기소</a>
+                        <a href="#">구글 지도</a>
+                        <a href="#">네이버 지도</a>
+                        <a href="#">지하철 노선도</a>
+                    </article>
+
+                    <a href="#" class="sell">
+                        <img src="./img/aside_sell_txt.png" alt="매도의뢰"/>
+                        <img src="./img/aside_sell_house.jpg" alt="매물을 내놓습니다."/>
+                    </a>
+
+                    <a href="#" class="buy">
+                        <img src="./img/aside_buy_txt.png" alt="매입의뢰"/>
+                        <img src="./img/aside_buy_house.jpg" alt="매물을 구합니다."/>
+                    </a>
+
+                    <div class="banner">
+                        <img src="./img/aside_banner_ad.png" alt="AD"/>
+                        <img src="./img/aside_banner_txt.png" alt="감각적 내추럴 가구"/>
+                        <a href="#"><img src="./img/aside_banner_go.png" alt="바로가기 go"/></a>
+                    </div>
                 </aside>
-                <article></article>
-                <article></article>
-                <article></article>                
+
+                <article>
+                    <h3>서울시 매물 정보<a href="#"><img src="./img/ico_more.png" alt="more"/></a></h3>
+                    <ul>
+                        <li>
+                            <img src="./img/thumnail_sample1.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample2.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample3.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample4.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample5.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>경기도 매물 정보<a href="#"><img src="./img/ico_more.png" alt="more"/></a></h3>
+                    <ul>
+                        <li>
+                            <img src="./img/thumnail_sample1.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample2.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample3.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample4.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample5.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>부산시 매물 정보<a href="#"><img src="./img/ico_more.png" alt="more"/></a></h3>
+                    <ul>
+                        <li>
+                            <img src="./img/thumnail_sample1.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample2.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample3.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample4.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                        <li>
+                            <img src="./img/thumnail_sample5.jpg" alt="썸네일" class="thumb"/>
+                            <a href="#">[아파트] 강변 신축아파트 분양 (방:5/욕실2) / 189㎡ / 매매가 20,800 분양가 20,800</a>
+                        </li>
+                    </ul>
+                </article>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <img src="./img/footer_logo.jpg" alt="푸터 로고">
+            <p>
+                (주)컴퍼니 / 사업자등록번호 123-45-67890 /   통신판매업신고 제 2013-컴퍼니구-123호 / 등록번호 컴퍼니01234 (2013.04.01) / 발행인 : 홍길동<br>
+                대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 부산시 금정구 따듯한동 123-1
+                <span>Copyright(C)컴퍼니 All rights reserved.</span>
+            </p>
+        </footer>
     </div>
 </body>
 </html>
