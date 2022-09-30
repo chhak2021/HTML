@@ -75,25 +75,89 @@
             overflow: hidden;
         }
         main > div > div {            
-            border: 1px solid green;
+            border: 1px solid #d7d7d7;
             box-sizing: border-box;
         }
         main > div > .banner {
             float: left;
             width: 670px;
             height: 320px;
+            background: url(./img/main_banner_bg.jpg) no-repeat;
         }
+
+        main > div > .banner > img {
+            margin-top: 100px;
+            margin-left: 140px;
+        }
+        main > div > .banner > ul {
+            float: right;
+            width: 80px;
+            height: 100%;
+            border-left: 1px solid #d7d7d7;
+            overflow: hidden;
+        }
+        main > div > .banner > ul > img {
+            display: block;
+        }
+        main > div > .banner > ul > li {
+            width: 100%;
+            height: 41px;
+            border-top: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+        main > div > .banner > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #f2f2f2;
+            text-align: center;
+            line-height: 41px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        main > div > .banner > ul > li > a:hover {
+            background: #fefefe;
+        }
+
         main > div > .call {
+            position: relative;
             float: right;
             width: 326px;
             height: 133px;
+            background: #f2f2f2;
         }
+
+        main > div > .call > img {position: absolute;}
+        main > div > .call > img:nth-child(1) {left:20px; top: 20px;}
+        main > div > .call > img:nth-child(2) {left:20px; top: 46px; z-index: 1;}
+        main > div > .call > img:nth-child(3) {left:20px; bottom: 20px; z-index: 1;}
+        main > div > .call > img:nth-child(4) {right:0px; top: 0px;}
+
+
         main > div > .qna {
             float: right;
             width: 326px;
             height: 182px;
             margin-top: 5px;
+            padding: 20px;
+            box-sizing: border-box;
         }
+
+        main > div > .qna > h3 { font-size: 14px; font-weight: bold;}
+        main > div > .qna > table {
+            margin-top: 6px;
+        }
+        main > div > .qna > table tr {}
+        main > div > .qna > table td {}
+        main > div > .qna > table td:nth-child(2) {
+            display: block;
+            width: 211px;
+            height: 18px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        main > div > .qna > table a:hover {text-decoration: underline;}
 
         main > section {            
             overflow: hidden;
@@ -106,6 +170,32 @@
             border: 1px solid green;
             box-sizing: border-box;
         }
+
+        main > section > aside > .notice {
+            width: 100%;
+            height: 204px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        main > section > aside > .notice > h3 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        main > section > aside > .notice > ul {
+            margin-top: 6px;
+        }
+        main > section > aside > .notice > ul > li {
+            width: 100%;
+            height: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        main > section > aside > .notice > ul a::before {content: url('./img/ico_latest.gif');}
+
+
         main > section > article {
             float: right;
             width: 800px;
@@ -149,12 +239,77 @@
         </header>
         <main>
             <div>
-                <div class="banner"></div>
-                <div class="call"></div>
-                <div class="qna"></div>
+                <div class="banner">
+                    <img src="./img/main_banner_txt.png" alt="전국 매물 보유량 최다! 계약 만족도 최상!"/>
+                    <ul>
+                        <img src="./img/main_banner_local.jpg" alt="지역선택"/>
+                        <li><a href="#">서울시</a></li>
+                        <li><a href="#">경기도</a></li>
+                        <li><a href="#">대전시</a></li>
+                        <li><a href="#">대구시</a></li>
+                        <li><a href="#">부산시</a></li>
+                        <li><a href="#">광주시</a></li>                        
+                    </ul>
+
+                </div>
+                <div class="call">
+                    <img src="./img/main_call_tit.png" alt="상담문의 전화"/>
+                    <img src="./img/main_call_txt.png" alt="궁금하신 사항은 언제든지 전화주세요."/>                    
+                    <img src="./img/main_call_num.png" alt="02-123-4567"/>
+                    <img src="./img/main_call_phone.png" alt="전화"/>
+                </div>
+                <div class="qna">
+                    <h3>질문과 답변</h3>
+                    <table border="0">
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">테스트입니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <section>
-                <aside></aside>
+                <aside>
+                    <article class="notice">
+                        <h3>공지사항</h3>
+                        <ul>                            
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                        </ul>
+                    </article>
+                </aside>
                 <article></article>
                 <article></article>
                 <article></article>                
