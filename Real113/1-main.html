@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>부동산113 메인</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 80px;
+            background: url('./img/header_bg.gif');
+        }
+
+        header > div {
+            position: relative;
+            width: 1000px;
+            height: 100%;            
+            margin: 0 auto;
+        }
+
+        header .gnb {
+            float: right;
+            width: 620px;
+            height: 32px;
+            margin-top: 14px;            
+            overflow: hidden;
+        }
+        header .gnb > li {
+            float: left;
+            width: 20%;
+            height: 100%;            
+            box-sizing: border-box;
+            text-align: right;
+        }
+        header .gnb > li > a {            
+            text-align: right;
+            line-height: 32px;
+            font-size: 17px;
+            font-weight: bolder;            
+        }
+        header .gnb > li > a:hover {
+            color: #7b231f;
+        }
+
+        header .latest {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 30px;            
+            box-sizing: border-box;
+        }
+
+        header .latest > a {display: inline-block; color: #555;}
+        header .latest > a:nth-child(1) {position: relative; top: 4px;}
+        header .latest > a:nth-child(2) {position: relative; top: -4px; left: 6px;}
+        header .latest > a:nth-child(2)::before {
+            content: url('./img/ico_latest.gif');            
+        }
+        header .latest > a:nth-child(2):hover {text-decoration: underline;}
+
+        /* 메인 */
+        main {
+            width: 1000px;
+            height: auto;
+            margin: 5px auto;
+        }
+
+        main > div {
+            overflow: hidden;
+        }
+        main > div > div {            
+            border: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+        main > div > .banner {
+            float: left;
+            width: 670px;
+            height: 320px;
+            background: url('./img/main_banner_bg.jpg') no-repeat;
+            overflow: hidden;
+        }
+
+        main > div > .banner > img {
+            margin-top: 100px;
+            margin-left: 160px;
+        }
+
+        main > div > .banner > ul {
+            float: right;
+            width: 80px;
+            height: 100%;
+            border-left: 1px solid #d7d7d7;
+        }
+        main > div > .banner > ul > img {
+            display: block;
+        }
+        main > div > .banner > ul > li {
+            width: 100%;
+            height: 41px;
+            border-top: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+        main > div > .banner > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 40.8px;
+            background: #f2f2f2;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        main > div > .banner > ul > li > a:hover {background: #fefefe;}
+
+        main > div > .call {
+            position: relative;
+            float: right;
+            width: 326px;
+            height: 133px;
+            background: #f2f2f2;
+        }
+
+        main > div > .call > img {position: absolute;}
+        main > div > .call > img:nth-child(1) {left: 20px; top: 20px;}
+        main > div > .call > img:nth-child(2) {left: 20px; top: 46px; z-index: 10;}        
+        main > div > .call > img:nth-child(3) {left: 20px; bottom: 20px; z-index: 10;}
+        main > div > .call > img:nth-child(4) {right: 0; top: 0; z-index: 0;}
+
+        main > div > .qna {
+            float: right;
+            width: 326px;
+            height: 182px;
+            margin-top: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        main > div > .qna > h3 {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        main > div > .qna > table {
+            width: 100%;
+            height: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-top: 6px;
+        }
+        main > div > .qna > table td {color: #6a6a6a;}
+        main > div > .qna > table td:nth-child(2) {
+            display: inline-block;    
+            width: 219px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 20px;
+        }
+        main > div > .qna > table a {color: inherit;}
+        main > div > .qna > table a:hover {text-decoration: underline;}
+
+
+        main > section {            
+            overflow: hidden;
+        }
+        main > section > aside {
+            float: left;
+            width: 195px;
+            height: 760px;
+            margin-top: 5px;
+            border: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+
+        main > section > aside > article {
+            width: 100%;
+            height: 204px;                        
+            padding: 10px;            
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        main > section > aside > article > h3 {font-weight: bold; font-size: 14px;}
+        main > section > aside > article > ul {margin-top: 6px;}
+        main > section > aside > article > ul > li {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        main > section > aside > article > ul > li > a::before {content: url('./img/ico_latest.gif');}
+        
+        main > section > aside > article > a {
+            display: block;
+            width: 100%;
+            height: 34px;
+            border: 1px solid #d9d9d9;
+            margin-top: 6px;
+            font-size: 0;
+            background-color: #f6f6f6;            
+            background-repeat: no-repeat;
+            background-position: 10px center;
+        }
+
+        main > section > aside > article > a:nth-of-type(1) {background-image: url(./img/aside_quick_court.png);}
+        main > section > aside > article > a:nth-of-type(2) {background-image: url(./img/aside_quick_google.png);}
+        main > section > aside > article > a:nth-of-type(3) {background-image: url(./img/aside_quick_naver_map.png);}
+        main > section > aside > article > a:nth-of-type(4) {background-image: url(./img/aside_quick_naver_subway.png);}
+
+        main > section > aside > a {
+            position: relative;
+            left: -1px;
+            display: block;
+            width: 195px;
+            height: 83px;            
+            border: 1px solid #999;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+
+        main > section > aside > a > img:nth-child(1){position: absolute; left: 10px; top: 10px;}
+        main > section > aside > a > img:nth-child(2){float: right;}
+
+        main > section > aside > .banner {
+            position: relative;
+            left: -1px;
+            width: 195px;
+            height: 167px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            margin-top: 6px;
+            background-image: url('./img/aside_banner_bg.jpg');            
+        }      
+
+        main > section > aside > .banner > img:nth-child(1) {float: right;}
+        main > section > aside > .banner > img:nth-child(2) {margin-left: 10px; margin-top: 30px;}
+        main > section > aside > .banner > a > img {margin-left: 10px; margin-top: 10px;}
+
+        main > section > article {
+            float: right;
+            width: 800px;
+            height: 250px;
+            margin-top: 5px;
+            border: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+
+        /* 푸터 */
+        footer {
+            width: 1000px;
+            height: 130px;
+            border: 1px solid #d7d7d7;
+            border-top: 2px solid #777777;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div>
+                <a href="#"><img src="./img/header_logo.jpg" alt="로고"/></a>
+                               
+                <ul class="gnb">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">매물정보</a></li>
+                    <li><a href="#">매도의뢰</a></li>
+                    <li><a href="#">매입의뢰</a></li>
+                    <li><a href="#">질문답변</a></li>
+                </ul>
+
+                <div class="latest">
+                    <a href="#"><img src="./img/header_txt_latest.gif" alt="최신매물정보"/></a>
+                    <a href="#">[아파트] 삼성동 전세 (방:3/욕실2) / 157㎡ / 매매가 21,100</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="banner">
+                    <img src="./img/main_banner_txt.png" alt="전국 매물 보유량 최다! 계약 만족도 최상!"/>
+                    <ul>
+                        <img src="./img/main_banner_local.jpg" alt="지역선택"/>
+                        <li><a href="#">서울시</a></li>
+                        <li><a href="#">경기도</a></li>
+                        <li><a href="#">대전시</a></li>
+                        <li><a href="#">대구시</a></li>
+                        <li><a href="#">부산시</a></li>
+                        <li><a href="#">광주시</a></li>                        
+                    </ul>
+                </div>
+                <div class="call">
+                    <img src="./img/main_call_tit.png" alt="상담문의 전화"/>
+                    <img src="./img/main_call_txt.png" alt="궁금하신 사항은 언제든지 전화주세요."/>                    
+                    <img src="./img/main_call_num.png" alt="02-123-4567"/>
+                    <img src="./img/main_call_phone.png" alt="전화"/>
+                </div>
+                <div class="qna">
+                    <h3>질문과 답변</h3>
+                    <table border="0">
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">테스트입니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/ico_latest.gif" alt=">"/></td>
+                            <td><a href="#">[문의] 분양상품 중 문의 드립니다. 빠른 답변 부탁드립니다.</a></td>
+                            <td>20-05-13</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <section>
+                <aside>
+                    <article class="notice">
+                        <h3>공지사항</h3>
+                        <ul>                            
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                            <li><a href="#">전국 매물 보유량 최다! 계약 만족도 최상!.</a></li>
+                        </ul>
+                    </article>
+                    <article class="quick">
+                        <h3>바로가기</h3>
+                        <a href="#">대법원 인터넷 등기소</a>
+                        <a href="#">구글 지도</a>
+                        <a href="#">네이버 지도</a>
+                        <a href="#">지하철 노선도</a>
+                    </article>
+
+                    <a href="#" class="sell">
+                        <img src="./img/aside_sell_txt.png" alt="매도의뢰"/>
+                        <img src="./img/aside_sell_house.jpg" alt="매물을 내놓습니다."/>
+                    </a>
+
+                    <a href="#" class="buy">
+                        <img src="./img/aside_buy_txt.png" alt="매입의뢰"/>
+                        <img src="./img/aside_buy_house.jpg" alt="매물을 구합니다."/>
+                    </a>
+
+                    <div class="banner">
+                        <img src="./img/aside_banner_ad.png" alt="AD"/>
+                        <img src="./img/aside_banner_txt.png" alt="감각적 내추럴 가구"/>
+                        <a href="#"><img src="./img/aside_banner_go.png" alt="바로가기 go"/></a>
+                    </div>
+
+
+                </aside>
+                <article>
+                    <h3>서울시 매물 정보</h3>
+                    <a href="#"><img src="./img/ico_more.png" alt="더보기"/></a>
+                    <ul>
+                        <li>
+                            <img src="./" alt="">
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>경기도 매물 정보</h3>
+                    <a href="#"><img src="./img/ico_more.png" alt="더보기"/></a>
+
+                </article>
+                <article>
+                    <h3>부산시 매물 정보</h3>
+                    <a href="#"><img src="./img/ico_more.png" alt="더보기"/></a>
+
+                </article>                
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

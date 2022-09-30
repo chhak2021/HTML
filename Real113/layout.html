@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>부동산113 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '고딕';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+        }
+
+        /* 헤더 */
+        header {
+            width: 100%;
+            height: 80px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        header > div {
+            width: 1000px;
+            height: 100%;
+            border: 1px solid green;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+
+        /* 메인 */
+        main {
+            width: 1000px;
+            height: auto;
+            margin: 5px auto;
+        }
+
+        main > div {
+            overflow: hidden;
+        }
+        main > div > div {            
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > div > .banner {
+            float: left;
+            width: 670px;
+            height: 320px;
+        }
+        main > div > .call {
+            float: right;
+            width: 326px;
+            height: 133px;
+        }
+        main > div > .qna {
+            float: right;
+            width: 326px;
+            height: 182px;
+            margin-top: 5px;
+        }
+
+        main > section {            
+            overflow: hidden;
+        }
+        main > section > aside {
+            float: left;
+            width: 195px;
+            height: 760px;
+            margin-top: 5px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > section > article {
+            float: right;
+            width: 800px;
+            height: 250px;
+            margin-top: 5px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+
+        /* 푸터 */
+        footer {
+            width: 1000px;
+            height: 130px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div></div>
+        </header>
+        <main>
+            <div>
+                <div class="banner"></div>
+                <div class="call"></div>
+                <div class="qna"></div>
+            </div>
+            <section>
+                <aside></aside>
+                <article></article>
+                <article></article>
+                <article></article>                
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
