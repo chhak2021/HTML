@@ -12,8 +12,6 @@ input, textarea {outline: none;}
     width: 980px;
     height: auto;
     margin: 0 auto;
-    border: 1px solid red;
-    box-sizing: border-box;
 }
 
 /* 헤더영역 */

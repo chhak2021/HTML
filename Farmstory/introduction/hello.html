@@ -9,35 +9,61 @@
         #sub {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
-            box-sizing: border-box;
         }
         #sub > div {
             width: 100%;
             height: 184px;
-            border: 1px solid green;
-            box-sizing: border-box;
+            background-image: url('../img/sub_top_bg.jpg');
         }
         #sub > section {
             width: 100%;
-            height: auto;
-            border: 1px solid green;
-            box-sizing: border-box;
+            height: auto;            
             overflow: hidden;
         }
         #sub > section > aside {
             float: left;
             width: 176px;
             height: 650px;
-            border: 1px solid orange;
+            background-image: url('../img/sub_aside_bg_line.png');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        #sub > section > aside > img {
+            margin: 16px;
+        }
+
+        #sub > section > aside > ul {
+            width: 175px;
+            height: 233px;
+            padding-top: 26px;
+            background-image: url('../img/sub_aside_bg_lnb.png');
             box-sizing: border-box;
         }
+        #sub > section > aside > ul > li {
+            width: 100%;
+            height: 29px;            
+            margin-bottom: 6px;
+        }
+        #sub > section > aside > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;            
+            font-size: 0;
+        }
+        #sub > section > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate1_lnb1.png');}
+        #sub > section > aside > ul > li:nth-child(2) > a {background-image: url('../img/sub_cate1_lnb2.png');}
+        #sub > section > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate1_lnb1_ov.png');}
+        #sub > section > aside > ul > li:nth-child(2) > a:hover {background-image: url('../img/sub_cate1_lnb2_ov.png');}
+        #sub > section > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate1_lnb1_ov.png');}
+        #sub > section > aside > ul > li:nth-child(2).on > a {background-image: url('../img/sub_cate1_lnb2_ov.png');}
+
+
         #sub > section > article {
             float: left;
             width: 798px;
             min-height: 650px;
             padding-left: 40px;            
-            border: 1px solid orange;
             box-sizing: border-box;
         }
 
@@ -73,11 +99,19 @@
             </ul>
         </header>
         <div id="sub">
-            <div></div>
+            <div><img src="../img/sub_top_tit1.png" alt="INTRODUCTION"></div>
             <section>
-                <aside></aside>
+                <aside>
+                    <img src="../img/sub_aside_cate1_tit.png" alt="팜스토리소개">
+                    <ul>
+                        <li class="on"><a href="#">인사말</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                </aside>
                 <article>
-                    <nav></nav>
+                    <nav>
+                        <img src="../img/sub_nav_tit_cate1_tit1.png" alt="인사말">
+                    </nav>
                     <p>
                         컨텐츠 내용
                     </p>
