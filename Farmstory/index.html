@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>팜스토리::메인</title>
+    <style>
+        /* 초기화 */
+        * {
+            margin: 0;
+            padding: 0;
+            font: normal 12px '돋움';
+        }
+        ul, ol {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        input, textarea {outline: none;}
+
+        #wrapper {
+            width: 980px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        /* 헤더 */
+        header {
+            position: relative;
+            width: 100%;
+            height: 142px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+
+        header > .gnb {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            border: 1px solid green;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        header > .gnb > li {
+            float: left;
+            width: 20%;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+        }
+        header > .gnb > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            font-size: 0;
+        }
+
+        /* 메인 */
+        main {
+            width: 100%;
+            height: auto;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+        main > div {
+            width: 100%;
+            margin-top: 10px;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+        main > .slider {
+            height: 312px;
+        }
+        main > .quick {
+            height: 74px;
+            overflow: hidden;
+        }
+        main > .quick > a {
+            float: left;
+            display: block;
+            width: 50%;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+        }
+
+        main > .latest {
+            height: 186px;
+            overflow: hidden;
+        }
+
+        main > .latest > div {
+            float: left;
+            width: 33.33%;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+        }
+
+        main > .info {
+            height: 154px;
+            overflow: hidden;
+        }
+
+        main > .info > div {
+            float: left;
+            height: 100%;
+            border: 1px solid orange;
+            box-sizing: border-box;
+        }
+
+        main > .info > div:nth-child(1) {width: 386px;}
+        main > .info > div:nth-child(2) {width: 230px;}
+        main > .info > div:nth-child(3) {width: 358px;}
+
+        /* 푸터 */
+        footer {
+            width: 100%;
+            height: 120px;
+            margin-top: 10px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <ul class="gnb">
+                <li><a href="#">팜스토리소개</a></li>
+                <li><a href="#">장보기</a></li>
+                <li><a href="#">농작물이야기</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="slider"></div>
+            <div class="quick">
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+            <div class="latest">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <div class="info">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
