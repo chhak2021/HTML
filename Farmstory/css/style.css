@@ -255,3 +255,115 @@ footer > p > em {
     color: #888;
     font-weight: bold;
 }
+
+/* 서브 페이지 공통 */
+#sub {
+    width: 100%;
+    height: auto;
+}
+#sub > div {
+    width: 100%;
+    height: 184px;
+    background-image: url('../img/sub_top_bg.jpg');
+}
+#sub > section {
+    width: 100%;
+    height: auto;            
+    overflow: hidden;
+}
+#sub > section > aside {
+    float: left;
+    width: 176px;
+    height: 650px;
+    background-image: url('../img/sub_aside_bg_line.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#sub > section > aside > img {
+    margin: 16px;
+}
+
+#sub > section > aside > ul {
+    width: 175px;
+    height: 233px;
+    padding-top: 26px;
+    background-image: url('../img/sub_aside_bg_lnb.png');
+    box-sizing: border-box;
+}
+#sub > section > aside > ul > li {
+    width: 100%;
+    height: 29px;            
+    margin-bottom: 6px;
+}
+#sub > section > aside > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;            
+    font-size: 0;
+}
+
+
+#sub > section > article {
+    float: left;
+    width: 798px;
+    min-height: 650px;
+    padding-left: 40px;            
+    box-sizing: border-box;
+}
+
+#sub > section > article > nav {
+    width: 100%;
+    height: 72px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #c2c2c2;
+    box-sizing: border-box;
+}
+
+/* 팜스토리소개 */
+#sub > .cate1 > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate1_lnb1.png');}
+#sub > .cate1 > aside > ul > li:nth-child(2) > a {background-image: url('../img/sub_cate1_lnb2.png');}
+#sub > .cate1 > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate1_lnb1_ov.png');}
+#sub > .cate1 > aside > ul > li:nth-child(2) > a:hover {background-image: url('../img/sub_cate1_lnb2_ov.png');}
+#sub > .cate1 > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate1_lnb1_ov.png');}
+#sub > .cate1 > aside > ul > li:nth-child(2).on > a {background-image: url('../img/sub_cate1_lnb2_ov.png');}
+
+/* 장보기 */
+#sub > .cate2 > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate2_lnb1.png');}
+#sub > .cate2 > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate2_lnb1_ov.png');}
+#sub > .cate2 > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate2_lnb1_ov.png');}
+
+
+/* 농작물이야기 */
+#sub > .cate3 > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate3_lnb1.png');}
+#sub > .cate3 > aside > ul > li:nth-child(2) > a {background-image: url('../img/sub_cate3_lnb2.png');}
+#sub > .cate3 > aside > ul > li:nth-child(3) > a {background-image: url('../img/sub_cate3_lnb3.png');}
+#sub > .cate3 > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate3_lnb1_ov.png');}
+#sub > .cate3 > aside > ul > li:nth-child(2) > a:hover {background-image: url('../img/sub_cate3_lnb2_ov.png');}
+#sub > .cate3 > aside > ul > li:nth-child(3) > a:hover {background-image: url('../img/sub_cate3_lnb3_ov.png');}
+#sub > .cate3 > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate3_lnb1_ov.png');}
+#sub > .cate3 > aside > ul > li:nth-child(2).on > a {background-image: url('../img/sub_cate3_lnb2_ov.png');}
+#sub > .cate3 > aside > ul > li:nth-child(3).on > a {background-image: url('../img/sub_cate3_lnb3_ov.png');}
+
+
+/* 이벤트 */
+#sub > .cate4 > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate4_lnb1.png');}
+#sub > .cate4 > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate4_lnb1_ov.png');}
+#sub > .cate4 > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate4_lnb1_ov.png');}
+
+/* 커뮤니티 */
+#sub > .cate5 > aside > ul > li:nth-child(1) > a {background-image: url('../img/sub_cate5_lnb1.png');}
+#sub > .cate5 > aside > ul > li:nth-child(2) > a {background-image: url('../img/sub_cate5_lnb2.png');}
+#sub > .cate5 > aside > ul > li:nth-child(3) > a {background-image: url('../img/sub_cate5_lnb3.png');}
+#sub > .cate5 > aside > ul > li:nth-child(4) > a {background-image: url('../img/sub_cate5_lnb4.png');}
+#sub > .cate5 > aside > ul > li:nth-child(5) > a {background-image: url('../img/sub_cate5_lnb5.png');}
+#sub > .cate5 > aside > ul > li:nth-child(1) > a:hover {background-image: url('../img/sub_cate5_lnb1_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(2) > a:hover {background-image: url('../img/sub_cate5_lnb2_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(3) > a:hover {background-image: url('../img/sub_cate5_lnb3_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(4) > a:hover {background-image: url('../img/sub_cate5_lnb4_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(5) > a:hover {background-image: url('../img/sub_cate5_lnb5_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(1).on > a {background-image: url('../img/sub_cate5_lnb1_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(2).on > a {background-image: url('../img/sub_cate5_lnb2_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(3).on > a {background-image: url('../img/sub_cate5_lnb3_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(4).on > a {background-image: url('../img/sub_cate5_lnb4_ov.png');}
+#sub > .cate5 > aside > ul > li:nth-child(5).on > a {background-image: url('../img/sub_cate5_lnb5_ov.png');}
