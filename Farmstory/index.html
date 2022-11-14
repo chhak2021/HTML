@@ -22,13 +22,29 @@
             box-sizing: border-box;
         }
 
-        /* 헤더 */
+        /* 헤더영역 */
         header {
             position: relative;
             width: 100%;
             height: 142px;
-            border: 1px solid blue;
-            box-sizing: border-box;
+            background-image: url('./img/head_top_line.png');
+            background-repeat: no-repeat;
+        }
+
+        header > .logo {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            margin-left: -95px;
+        }
+        header > p {
+            float: right;
+            margin-top: 16px;
+        }
+        header > img {
+            float: right;
+            clear: both;
+            margin-top: 26px;
         }
 
         header > .gnb {
@@ -37,54 +53,102 @@
             bottom: 0;
             width: 100%;
             height: 50px;
-            border: 1px solid green;
-            box-sizing: border-box;
-            overflow: hidden;
         }
         header > .gnb > li {
             float: left;
             width: 20%;
             height: 100%;
-            border: 1px solid orange;
-            box-sizing: border-box;
+            background-image: url('./img/head_menu_line.png');
+            background-repeat: no-repeat;
+            background-position: 0 -6px;
         }
+
         header > .gnb > li > a {
+            position: relative;
             display: block;
             width: 100%;
             height: 100%;
-            border: 1px solid pink;
-            box-sizing: border-box;
             font-size: 0;
+            background-position: 0 6px;
+            background-repeat: no-repeat;
         }
+
+        header > .gnb > li > a > img {
+            position: absolute;
+            left: 50%;
+            top: -16px;
+        }
+
+        header > .gnb > li:nth-child(1) > a {background-image: url('./img/head_menu1.png');}
+        header > .gnb > li:nth-child(2) > a {background-image: url('./img/head_menu2.png');}
+        header > .gnb > li:nth-child(3) > a {background-image: url('./img/head_menu3.png');}
+        header > .gnb > li:nth-child(4) > a {background-image: url('./img/head_menu4.png');}
+        header > .gnb > li:nth-child(5) > a {background-image: url('./img/head_menu5.png');}
+
+        header > .gnb > li:nth-child(1) > a:hover {background-image: url('./img/head_menu1_ov.png');}
+        header > .gnb > li:nth-child(2) > a:hover {background-image: url('./img/head_menu2_ov.png');}
+        header > .gnb > li:nth-child(3) > a:hover {background-image: url('./img/head_menu3_ov.png');}
+        header > .gnb > li:nth-child(4) > a:hover {background-image: url('./img/head_menu4_ov.png');}
+        header > .gnb > li:nth-child(5) > a:hover {background-image: url('./img/head_menu5_ov.png');}
+
 
         /* 메인 */
         main {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
-            box-sizing: border-box;
         }
         main > div {
             width: 100%;
             margin-top: 10px;
-            border: 1px solid green;
-            box-sizing: border-box;
         }
+       
         main > .slider {
+            position: relative;
             height: 312px;
+            overflow: hidden;
+        }
+
+        main > .slider > img {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+        }
+
+        main > .slider > .banner {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 230px;
+            height: 312px;
+            background-image: url('./img/main_banner_bg.jpg');
+        }
+
+        main > .slider > .banner > img:nth-child(1) {
+            float: right;
+            margin: 10px;
+        }
+        main > .slider > .banner > img:nth-child(2) {
+            margin-top: -20px;
+            margin-left: 10px;
+        }
+        main > .slider > .banner > img:nth-child(3) {
+            margin-left: 10px;
         }
         main > .quick {
             height: 74px;
             overflow: hidden;
         }
+
         main > .quick > a {
             float: left;
             display: block;
             width: 50%;
             height: 100%;
-            border: 1px solid orange;
+            padding: 16px;
             box-sizing: border-box;
         }
+        main > .quick > a:nth-child(1) {background-image: url('./img/main_banner_sub1_bg.jpg');}
+        main > .quick > a:nth-child(2) {background-image: url('./img/main_banner_sub2_bg.jpg');}
 
         main > .latest {
             height: 186px;
@@ -92,68 +156,297 @@
         }
 
         main > .latest > div {
+            position: relative;
             float: left;
             width: 33.33%;
             height: 100%;
-            border: 1px solid orange;
-            box-sizing: border-box;
+        }
+
+        main > .latest > div > a {
+            position: absolute;
+            left: 0;
+            top: 16px;
+        }
+        main > .latest > div > img {
+            position: absolute;
+            left: 0;
+            bottom: 16px;
+        }
+        main > .latest table {
+            position: absolute;
+            right: 10px;
+            bottom: 16px;
+            color: #6a6a6a;
+        }
+        main > .latest table tr > td > a{
+            display: block;
+            width: 140px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 18px;  
+            color: #6a6a6a;
         }
 
         main > .info {
             height: 154px;
             overflow: hidden;
+            padding: 10px 0;
+            border-top: 2px solid #756c65;
+            box-sizing: border-box;
         }
 
         main > .info > div {
             float: left;
             height: 100%;
-            border: 1px solid orange;
+        }
+        main > .info > div:nth-child(1) {
+            width: 386px;
+        }
+        main > .info > div:nth-child(2) {
+            width: 230px;
+            padding-left: 16px;
+            border-left: 1px solid #d7d7d7;
+            border-right: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+        main > .info > div:nth-child(3) {
+            width: 360px;
+            padding-left: 10px;
             box-sizing: border-box;
         }
 
-        main > .info > div:nth-child(1) {width: 386px;}
-        main > .info > div:nth-child(2) {width: 230px;}
-        main > .info > div:nth-child(3) {width: 358px;}
+        main > .info > div > .tit {
+            margin-bottom: 16px;
+        }
+
+        main > .info > div > .tel {
+            overflow: hidden;
+        }
+        main > .info > div > .tel > * {
+            float: left;
+            margin-right: 16px;
+        }
+
+        main > .info > div > .tel > .time {
+            line-height: 18px;
+            color: #666;
+        }
+
+        main > .info > div > .btns {
+            margin-top: 16px;
+        }
+
+        main > .info > div > .account {
+            line-height: 18px;
+            color: #666;
+        }
 
         /* 푸터 */
         footer {
             width: 100%;
             height: 120px;
             margin-top: 10px;
-            border: 1px solid blue;
+            border-top: 1px solid #d1cab2;
             box-sizing: border-box;
+        }
+
+        footer > p {
+            float: right;
+            font-size: 11px;
+            color: #585858;
+            margin-top: 26px;
+            margin-right: 16px;
+            line-height: 18px;
+        }
+        footer > p > em {
+            color: #888;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div id="wrapper">
         <header>
+            <a href="./index.html" class="logo"><img src="./img/logo.png" alt="로고"/></a>
+            <p>
+                <a href="#">HOME |</a>
+                <a href="#">로그인 |</a>
+                <a href="#">회원가입 |</a>
+                <a href="#">고객센터</a>
+            </p>
+            <img src="./img/head_txt_img.png" alt="3만원 이상 무료배송"/>
+            
             <ul class="gnb">
-                <li><a href="#">팜스토리소개</a></li>
-                <li><a href="#">장보기</a></li>
-                <li><a href="#">농작물이야기</a></li>
-                <li><a href="#">이벤트</a></li>
-                <li><a href="#">커뮤니티</a></li>
+                <li><a href="./introduction/hello.html">팜스토리소개</a></li>
+                <li><a href="./market/market.html"><img src="./img/head_menu_badge.png" alt="30%"/>장보기</a></li>
+                <li><a href="./croptalk/story.html">농작물이야기</a></li>
+                <li><a href="./event/event.html">이벤트</a></li>
+                <li><a href="./community/notice.html">커뮤니티</a></li>
             </ul>
         </header>
         <main>
-            <div class="slider"></div>
+            <div class="slider">
+                <ul>
+                    <li><img src="./img/main_slide_img1.jpg" alt="슬라이더1"></li>
+                    <li><img src="./img/main_slide_img2.jpg" alt="슬라이더2"></li>
+                    <li><img src="./img/main_slide_img3.jpg" alt="슬라이더3"></li>
+                </ul>
+
+                <img src="./img/main_slide_img_tit.png" alt="사람과 자연을 사랑하는 팜스토리"/>
+
+                <div class="banner">
+                    <img src="./img/main_banner_txt.png" alt="GRAND OPEN"/>
+                    <img src="./img/main_banner_tit.png" alt="팜스토리 오픈기념 30% 할인 이벤트"/>
+                    <img src="./img/main_banner_img.png" alt="과일"/>
+                </div>
+            </div>
+
             <div class="quick">
-                <a href="#"></a>
-                <a href="#"></a>
+                <a href="#"><img src="./img/main_banner_sub1_tit.png" alt="오늘의 식단"></a>
+                <a href="#"><img src="./img/main_banner_sub2_tit.png" alt="나도 요리사"></a>                
             </div>
+
             <div class="latest">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+                <div>
+                    <a href="#"><img src="./img/main_latest1_tit.png" alt="텃밭 가꾸기"/></a>
+                    <img src="./img/main_latest1_img.jpg" alt="이미지"/>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <a href="#"><img src="./img/main_latest2_tit.png" alt="귀농학교"/></a>
+                    <img src="./img/main_latest2_img.jpg" alt="이미지"/>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <a href="#"><img src="./img/main_latest3_tit.png" alt="농작물 이야기"/></a>
+                    <img src="./img/main_latest3_img.jpg" alt="이미지"/>
+                    <table border="0">
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                        <tr>
+                            <td>></td>
+                            <td><a href="#">토마토! 건강하게 길러서 안심하고 먹자</a></td>
+                            <td>20-12-22</td>
+                        </tr>
+                    </table>
+                </div>
+                
             </div>
+
             <div class="info">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
+                <div>
+                    <img src="./img/main_sub2_cs_tit.png" class="tit" alt="고객센터 안내"/>
+                    <div class="tel">
+                        <img src="./img/main_sub2_cs_img.png" alt="">
+                        <img src="./img/main_sub2_cs_txt.png" alt="1666-777">
+                        <p class="time">
+                            평일: AM 09:00 ~ PM 06:00<br>
+                            점심: PM 12:00 ~ PM 01:00<br>
+                            토, 일요일, 공휴일 휴무
+                        </p>
+                    </div>
+                    <div class="btns">
+                        <a href="#"><img src="./img/main_sub2_cs_bt1.png" alt="1:1 고객문의"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt2.png" alt="자주묻는질문"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt3.png" alt="배송조회"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/main_sub2_account_tit.png" class="tit" alt="계좌안내"/>
+                    <p class="account">
+                        기업은행 123-456789-01-01-012<br />
+                        국민은행 01-1234-56789<br />
+                        우리은행 123-456789-01-01-012<br />
+                        하나은행 123-456789-01-01<br />
+                        예 금 주 (주)팜스토리
+                    </p>
+                </div>
+                <div>
+                    
+                </div>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <img src="./img/footer_logo.png" alt="로고"/>
+            <p>
+                (주)팜스토리 / 사업자등록번호 123-45-67890 / 통신판매업신고 제 2013-팜스토리구-123호 / 벤처기업확인 서울지방중소기업청 제 012345678-9-01234호<br />
+                등록번호 팜스토리01234 (2013.04.01) / 발행인 : 홍길동<br />
+                대표 : 홍길동 / 이메일 : email@mail.mail / 전화 : 01) 234-5678 / 경기도 성남시 잘한다구 신난다동 345<br />
+                <em>Copyright(C)홍길동 All rights reserved.</em>
+            </p>
+        </footer>
     </div>
+    
 </body>
 </html>
